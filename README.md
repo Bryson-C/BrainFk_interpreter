@@ -1,3 +1,3 @@
 # BrainF**k Interpreter
 ### Todo
-- add [https://esolangs.org/wiki/CLEB] CLEB Support
+- add [CLEB](https://esolangs.org/wiki/CLEB) Support
