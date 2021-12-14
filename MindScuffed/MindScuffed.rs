@@ -47,7 +47,7 @@ fn main() {
         if chr == '/' { cells[current] /= 2; }
         if chr == '&' { cells[current] += cells[current+1]; cells[current+1] = 0; }
         if chr == '~' { } // random
-        if chr == '`' { cells[current] -= cells[current+1]; cells[current+1] = 0; }
+        if chr == '\\' { cells[current] -= cells[current+1]; cells[current+1] = 0; }
         if chr == 'l' { printcells(cells); }
         x+=1;
     }
