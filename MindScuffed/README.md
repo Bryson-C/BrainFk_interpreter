@@ -13,5 +13,6 @@
 | `*` | multiplies the cell's value by 2|
 | `/` | divides the cell's value by 2 |
 | `&` | adds the cell's value to the right of the current cell, then sets the cell to the right to 0 |
+| `~` | sets current cell's value to a random number between 0 and `CELL_MAX` |
 | `\` | subtracts the cell's value to the right of the current cell, then sets the cell to the right to 0 |
 | `l` | prints the value of all cell's value's |
