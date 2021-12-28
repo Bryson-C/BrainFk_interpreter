@@ -17,9 +17,10 @@
 | `\` | subtracts the cell's value to the right of the current cell, then sets the cell to the right to 0 |
 | `l` | prints a list of all cell's value's |
 
+## Example
 ```
 ++++++++>++</.l
 ```
-: Program Will Output
+- Program Will Output
 > 4
 > | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
