@@ -62,7 +62,7 @@ fn interprete(path: String) {
 
 fn main() {
 
-    let path = String::from("D:\\Languages\\MindScuff\\src\\MindScuff.ms");
+    let path = String::from("C:\\Path_To_File"); // ignores file stem (use .ms if you'd like)
     interprete(path);
 
 }
