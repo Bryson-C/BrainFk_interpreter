@@ -16,3 +16,10 @@
 | `~` | sets current cell's value to a random number between 0 and `CELL_MAX` |
 | `\` | subtracts the cell's value to the right of the current cell, then sets the cell to the right to 0 |
 | `l` | prints a list of all cell's value's |
+
+```
+++++++++>++</.l
+```
+: Program Will Output
+> 4
+> | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
