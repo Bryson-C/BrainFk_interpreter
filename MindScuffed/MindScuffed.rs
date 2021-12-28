@@ -3,7 +3,7 @@
 use std::io::Read;
 use rand::prelude::*;
 
-const CELL_MAX: i32 = 255;
+const CELL_MAX: i32 = i32::MAX;
 const CELL_SIZE: usize = 15;
 
 fn printcells(instructions: [i32; CELL_SIZE]) {
@@ -13,15 +13,10 @@ fn printcells(instructions: [i32; CELL_SIZE]) {
     println!("|");
 }
 
-fn main() {
-
-
-    let path = String::from("D:\\Languages\\MindScuff\\src\\MindScuff.ms");
+fn interprete(path: String) {
     let instructions = std::fs::read_to_string(path).unwrap();
-
     let mut cells:[i32; CELL_SIZE] = [0; CELL_SIZE];
     let mut current: usize = 0;
-
 
     let mut x: usize = 0;
     while x < instructions.len() {
@@ -55,12 +50,19 @@ fn main() {
             }
             x-=1; }
         }
-        if chr == '*' { cells[current] *= 2; }
-        if chr == '/' { cells[current] /= 2; }
+        if chr == '*' { cells[current] *= cells[current+1]; cells[current+1] = 0; }
+        if chr == '/' { cells[current] /= cells[current+1]; cells[current+1] = 0; }
         if chr == '&' { cells[current] += cells[current+1]; cells[current+1] = 0; }
         if chr == '~' { cells[current] = rand::thread_rng().gen_range(0..CELL_MAX); }
         if chr == '\\' { cells[current] -= cells[current+1]; cells[current+1] = 0; }
         if chr == 'l' { printcells(cells); }
         x+=1;
     }
+}
+
+fn main() {
+
+    let path = String::from("D:\\Languages\\MindScuff\\src\\MindScuff.ms");
+    interprete(path);
+
 }
